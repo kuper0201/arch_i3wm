@@ -1,4 +1,8 @@
-#!/bin/bash
+#!/usr/bin/env bash
+set -Eeuo pipefail
+
+cd -- "$(dirname -- "${BASH_SOURCE[0]}")"
+install -d /etc/skel /etc/X11/xorg.conf.d /etc/lightdm
 
 # 테마 및 스크립트 설치
 cp dot_bashrc /etc/skel/.bashrc

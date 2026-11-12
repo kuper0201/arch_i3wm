@@ -171,7 +171,7 @@ mode "resize" {
 bindsym $MOD+r mode "resize"
 
 exec --no-startup-id ~/.config/polybar/launch.sh
-exec --no-startup-id compton --config ~/.config/compton/compton.conf
+exec --no-startup-id picom --config ~/.config/compton/compton.conf
 exec --no-startup-id feh --bg-fill ~/.config/wallpaper/wall_1.png
 exec --no-startup-id nm-applet
 exec --no-startup-id fcitx5 -d
