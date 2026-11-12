@@ -11,12 +11,16 @@ cp dot_xinitrc /etc/skel/.xinitrc
 cp dot_Xresources /etc/skel/.Xresources
 cp 40-libinput.conf /etc/X11/xorg.conf.d/40-libinput.conf
 #cp -r scripts /etc/skel/scripts
-cp -r dot_config /etc/skel/.config
-cp -r dot_themes /etc/skel/.themes
-cp -r wallpapers /usr/share/wallpapers
+install -d /etc/skel/.config
+cp -a dot_config/. /etc/skel/.config/
+install -d /etc/skel/.themes
+cp -a dot_themes/. /etc/skel/.themes/
+install -d /usr/share/wallpapers
+cp -a wallpapers/. /usr/share/wallpapers/
 
 mkdir -p /etc/skel/.local/share
-cp -r fonts /etc/skel/.local/share/fonts
+install -d /etc/skel/.local/share/fonts
+cp -a fonts/. /etc/skel/.local/share/fonts/
 
 TARGET_DIR="/usr/share/wallpapers"
 
